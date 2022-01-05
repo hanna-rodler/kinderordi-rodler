@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="de">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+         content="width=device-width, user-scalable=no, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Dr. Rodler Termine</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../assets/sass/main.css" type="text/css">
+</head>
+<body>
+   <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+         <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand"><img src="../assets/img/DrRodler-logo.png" alt=""
+                                                              height="50rem"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="../index.html">Start</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="services.html">Leistungen</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="practice.html">Ordination</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">Über uns</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="appointments.html">Termine</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="ressources.html">Ressourcen</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <main class="container-lg">
+      <div class="info">
+         <div class="row">
+            <div class="col-md-9">
+               <h2>Hinweis</h2>
+               <div>
+                  In dringenden Fällen melden Sie sich bitte telefonisch bei uns. <br><br>
+                  Für planbare Untersuchungen wie Mutter-Kind-Pass Untersuchungen, diverse Vorsorgeuntersuchungen,
+                  Beratungsgespräche, Impfungen etc. füllen Sie bitte das unten angeführte Formular aus.
+                  Terminanfragen werden innerhalb zwei Studenten bearbeitet.
+               </div>
+            </div>
+            <div class="col-md-3">
+               <div class="row">
+                  <h2>Kontakt</h2>
+                  <div>Hellndorferweg 25<br>4040 Linz<br>Oberösterreich</div>
+                  <div>+43 732 436433</div>
+               </div>
+               <div class="row">
+                  <h2>Öffnungszeiten</h2>
+                  <div class="col-4">Mo, Di: <br> Mi, Do: <br>Fr:</div>
+                  <div class="col-8">07:00 - 15:00 Uhr<br>12:30 - 20:00 Uhr <br>08:00 - 18:00 Uhr</div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <h2>Terminanfrage</h2>
+      <p>Alle mit * gekennzeichneten Felder sind verpflichtend auszufüllen.</p>
+      <form>
+         <fieldset class="row g-3">
+            <legend class="mb-1">Patienteninformationen</legend>
+            <div class="col-md-6">
+               <label for="firstName" class="form-label">Vorname *</label>
+               <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="col-md-6">
+               <label for="lastName" class="form-label">Nachname *</label>
+               <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="col-md-6">
+               <label for="reason" class="form-label">Termin für *</label>
+               <select class="form-select" aria-label="Default select example" id="reason" required>
+                  <option selected>Erkrankung</option>
+                  <option value="1">Vorsorgeuntersuchung</option>
+                  <option value="2">Mutter-Kind-Pass Untersuchung</option>
+                  <option value="3">Beratungsgespräch</option>
+                  <option value="3">Sonstiges</option>
+               </select>
+            </div>
+            <div class="col-md-6">
+               <label for="svnr" class="form-label">Sozialversicherungsnummer (10-stellig) *</label>
+               <input type="number" class="form-control" id="svnr" min="1000000000" max="9999999999" required>
+            </div>
+            <div class="col-md-6">
+               <label for="birthDate" class="form-label">Geburtsdatum *</label>
+               <input type="date" class="form-control" id="birthDate" required>
+            </div>
+         </fieldset>
+         <fieldset class="row g-3 my-3">
+            <legend class="mb-1">Kontaktdaten</legend>
+            <div class="col-md-6">
+               <label for="inputEmail" class="form-label">Email *</label>
+               <input type="email" class="form-control" id="inputEmail" required>
+            </div>
+            <div class="col-md-6">
+               <label for="telNum" class="form-label">Telefonnummer *</label>
+               <input type="tel" class="form-control" id="telNum" required>
+            </div>
+         </fieldset>
+         <fieldset class="row g-3 my-3">
+            <legend class="mb-1">Weitere Informationen</legend>
+            <div class="col-md-12">
+               <label for="possibleDays" class="form-label">Termine sind für mich mögliche an *</label>
+               <input type="text" class="form-control" id="possibleDays" required
+                      placeholder="z.B. Dienstag Vormittagen">
+            </div>
+            <div class="col-md-12">
+               <label for="message" class="form-label">Nachricht</label>
+               <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+         </fieldset>
+         <div class="row d-flex justify-content-end">
+            <div>
+               <button class="btn btn-secondary">senden</button>
+            </div>
+         </div>
+      </form>
+   </main>
+
+   <footer>
+      <div class="container d-flex">
+         <div class="row d-flex">
+            <div class="col-md-2 col-sm-4 order-md-first order-sm-3 order-2 my-md-auto my-3">
+               <img class="img-fluid" src="../assets/img/DrRodler-logo.png" alt="Logo Dr. Rodler">
+            </div>
+            <div class="col-md-3 col-sm-8 d-flex justify-content-md-center order-2 my-md-auto my-3">
+               <div>
+                  <u>Kontakt</u>
+                  <div>Hellndorferweg 25<br>4040 Linz</div>
+                  <div>+43 732 436433</div>
+               </div>
+            </div>
+            <div class="to-top col-md-2 d-flex justify-content-center order-md-3 order-first my-md-auto my-3">
+               <div class="text-center">
+                  <i class="fa fa-angle-double-up"></i>
+                  <p>nach oben</p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-8 order-4 my-md-auto my-3">
+               <div class="row justify-content-md-end">
+                  <div class="row justify-content-end">
+                     <u>Öffnungszeiten</u>
+                  </div>
+                  <div class="row">
+                     <div class="col-4">Mo, Di: <br> Mi, Do: <br>Fr:</div>
+                     <div class="col">07:00 - 15:00 Uhr<br>12:30 - 20:00 Uhr <br>08:00 - 18:00 Uhr</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-1 col-sm-4 justify-content-center order-last my-md-auto my-3">
+               <div>
+                  <a href="">Impressum</a><br>
+                  <a href="">Datenschutz</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+           integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+           crossorigin="anonymous"></script>
+   <script
+         src="https://code.jquery.com/jquery-3.2.1.min.js"
+         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+         crossorigin="anonymous"></script>
+   <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
